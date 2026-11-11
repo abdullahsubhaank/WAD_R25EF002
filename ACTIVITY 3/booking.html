@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Book Tickets - IPL 2026</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="index.html#matches">Matches</a>
+    <a href="booking.html">Book Ticket</a>
+    <a href="index.html#mybookings">My Bookings</a>
+    <a href="index.html#guidelines">Guidelines</a>
+  </nav>
+
+  <section>
+    <h2>Ticket Booking Form</h2>
+
+    <form class="booking-form" action="#" method="post">
+
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your full name"
+             required minlength="3" maxlength="40">
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="10 digit number"
+             required pattern="[0-9]{10}" minlength="10" maxlength="10"
+             title="Enter exactly 10 digits">
+
+      <label for="match">Match</label>
+      <select id="match" name="match" required>
+        <option value="">-- Select a match --</option>
+        <option>Match 1: RCB vs CSK</option>
+        <option>Match 2: MI vs CSK</option>
+        <option>Match 3: KKR vs SRH</option>
+      </select>
+
+      <label for="stand">Stand Category</label>
+      <select id="stand" name="stand" required>
+        <option value="">-- Select a stand --</option>
+        <option>General</option>
+        <option>Premium</option>
+        <option>VIP</option>
+      </select>
+
+      <label for="tickets">Number of Tickets (1 to 10)</label>
+      <input type="number" id="tickets" name="tickets" min="1" max="10" required>
+
+      <fieldset>
+        <legend>Ticket Type</legend>
+        <input type="radio" id="eticket" name="type" value="E-Ticket" required>
+        <label for="eticket" class="inline">E-Ticket</label>
+        <input type="radio" id="collect" name="type" value="Collect at counter">
+        <label for="collect" class="inline">Collect at counter</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Additional Preferences</legend>
+        <input type="checkbox" id="parking" name="extras" value="Parking">
+        <label for="parking" class="inline">Parking pass</label>
+        <input type="checkbox" id="food" name="extras" value="Food combo">
+        <label for="food" class="inline">Food combo</label>
+        <input type="checkbox" id="sms" name="extras" value="SMS updates">
+        <label for="sms" class="inline">SMS updates</label>
+      </fieldset>
+
+      <button type="submit">Submit</button>
+      <button type="reset" class="reset">Reset</button>
+
+    </form>
+  </section>
+
+  <footer>
+    <p>Copyright 2026 IPL Ticket Booking</p>
+  </footer>
+
+</body>
+</html>
